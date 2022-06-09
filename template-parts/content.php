@@ -40,7 +40,7 @@
     </div><!-- .entry-content -->
 
     <footer class="entry-footer">
-        <?php sunset_posted_footer(); ?>
+        <?php echo sunset_posted_footer(); ?>
     </footer><!-- .entry-footer -->
 
 </article>
