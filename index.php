@@ -13,11 +13,12 @@ get_header(); ?>
                 <?php
 
                     if ( have_posts() ) :
-
-                        while ( have_posts() ) : the_post();
+                        $i = 1;
+                        while ( have_posts() && $i < 6 ) : the_post();
 
                             get_template_part( 'template-parts/content', get_post_format() );
 
+                        $i++;
                         endwhile;
 
                     endif;

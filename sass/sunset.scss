@@ -9,6 +9,7 @@
 
 @import 'base/variables';		// Variables
 @import 'base/mixins';			// Mixins
+@import 'base/placeholders';    // Place Holders
 @import 'base/fonticon';		// Font Icons
 
 /* 
@@ -48,10 +49,10 @@ a {
 	------------------------------------------------
 */
 .header-container { 
+	@extend %text-shadow;
 	position: relative; 
 	display: block; 
 	height: 326px; 
-	text-shadow: 0 1px 2px rgba(0,0,0,0.4); 
 }
 
 .site-title { 
@@ -184,7 +185,7 @@ h1 {
 
 .entry-meta {
 	font-size: 13px;
-	font-weight: 300;
+	font-weight: 200;
 	color: $light-grey;
 	margin-bottom: 15px;
 	a {
@@ -284,3 +285,72 @@ h1 {
 		}
 	}
 }
+
+// Image Post Format
+.sunset-format-image {
+	margin-top: 50px;
+	.entry-header {
+		@extend %text-shadow;
+		height: 600px;
+		position: relative;
+	}
+	h1,
+	.entry-meta,
+	.entry-header {
+		color: white;
+		a {
+			color: white;
+		}
+	}
+	h1 {
+		padding-top: 10px;
+	}
+}
+
+.entry-excerpt {
+	&.image-caption {
+		@extend %background-gradient;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		margin: 0;
+		p {
+			margin: 40px 0;
+		}
+	}
+}
+
+// Audio Post Format
+.sunset-format-audio {
+	h1 {
+		font-size: 30px;
+		&.entry-title {
+			display: inline-block;
+			margin-right: 20px;
+			&:before,
+			&:after {
+				display: none;
+			}
+		}
+	}
+	.entry-meta {
+		display: inline-block;
+		margin-bottom: 0;
+	}
+	.entry-content {
+		iframe {
+			width: 100%;
+			height: 166px;
+		}
+		audio {
+			width: 100%;
+		}
+	}
+}
+
+
+
+
+
+
