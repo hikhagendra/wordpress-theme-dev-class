@@ -21,12 +21,10 @@
     </head>
     <body <?php body_class(); ?>>
 
-        <div class="container">
+        <div class="container-fluid">
 
             <div class="row">
-                <div class="col-xs-12">
-
-                    <header class="header-container text-center background-image" style="background-image: url(<?php header_image(); ?>);">
+                <header class="header-container text-center background-image" style="background-image: url(<?php header_image(); ?>);">
 
                         <div class="header-content table">
                             
@@ -57,7 +55,6 @@
 
                     </header> <!-- .header-container -->
 
-                </div> <!-- .col-xs-12 -->
             </div> <!-- .row -->
 
         </div> <!-- .container-fluid -->

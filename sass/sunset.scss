@@ -154,7 +154,8 @@ a {
 
 // Standard Post Format
 article {
-	margin-bottom: 80px;
+	padding-top: 40px;
+	padding-bottom: 40px;
 }
 
 h1 {
@@ -165,7 +166,7 @@ h1 {
 	font-weight: 200;
 	&.entry-title {
 		line-height: 1.5em;
-		margin: 40px 0 0;
+		margin: 0;
 		padding: 0;
 		color: $primary-color;
 		&:before,
@@ -288,7 +289,6 @@ h1 {
 
 // Image Post Format
 .sunset-format-image {
-	margin-top: 50px;
 	.entry-header {
 		@extend %text-shadow;
 		height: 600px;
@@ -324,7 +324,6 @@ h1 {
 // Audio Post Format
 .sunset-format-audio {
 	h1 {
-		font-size: 30px;
 		&.entry-title {
 			display: inline-block;
 			margin-right: 20px;
@@ -358,6 +357,19 @@ h1 {
 	}
 }
 
-
+// Gallery Post Format
+.sunset-format-gallery {
+	h1 {
+		&.entry-title {
+			margin-top: 20px;
+		}
+	}
+	.standard-featured {
+		height: 500px;
+		&:after {
+			background-color: transparent;
+		}
+	}
+}
 
 

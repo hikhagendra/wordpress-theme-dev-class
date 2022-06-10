@@ -286,7 +286,8 @@ a:hover, a:focus {
 }
 
 article {
-  margin-bottom: 80px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 h1 {
@@ -300,7 +301,7 @@ h1 a {
 
 h1.entry-title {
   line-height: 1.5em;
-  margin: 40px 0 0;
+  margin: 0;
   padding: 0;
   color: #000000;
 }
@@ -424,10 +425,6 @@ h1.entry-title:after {
   margin-left: 10px;
 }
 
-.sunset-format-image {
-  margin-top: 50px;
-}
-
 .sunset-format-image .entry-header {
   height: 600px;
   position: relative;
@@ -461,10 +458,6 @@ h1.entry-title:after {
   margin: 40px 0;
 }
 
-.sunset-format-audio h1 {
-  font-size: 30px;
-}
-
 .sunset-format-audio h1.entry-title {
   display: inline-block;
   margin-right: 20px;
@@ -490,5 +483,17 @@ h1.entry-title:after {
 
 .sunset-format-video h1.entry-title {
   margin-top: 20px;
+}
+
+.sunset-format-gallery h1.entry-title {
+  margin-top: 20px;
+}
+
+.sunset-format-gallery .standard-featured {
+  height: 500px;
+}
+
+.sunset-format-gallery .standard-featured:after {
+  background-color: transparent;
 }
 /*# sourceMappingURL=sunset.css.map */
