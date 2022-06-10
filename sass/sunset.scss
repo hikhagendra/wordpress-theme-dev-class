@@ -349,7 +349,14 @@ h1 {
 	}
 }
 
-
+// Video Post Format
+.sunset-format-video {
+	h1 {
+		&.entry-title {
+			margin-top: 20px;
+		}
+	}
+}
 
 
 

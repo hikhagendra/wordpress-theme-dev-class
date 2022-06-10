@@ -487,4 +487,8 @@ h1.entry-title:after {
 .sunset-format-audio .entry-content audio {
   width: 100%;
 }
+
+.sunset-format-video h1.entry-title {
+  margin-top: 20px;
+}
 /*# sourceMappingURL=sunset.css.map */
