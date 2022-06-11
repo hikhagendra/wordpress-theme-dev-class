@@ -370,6 +370,60 @@ h1 {
 			background-color: transparent;
 		}
 	}
+	.carousel-control {
+		background: none;
+		background-image: none;
+		opacity: 1;
+		filter: alphpa(opacity=100);
+		font-size: 30px;
+		width: auto;
+		@extend %text-shadow;
+		.preview-container {
+			position: relative;
+			display: block;
+			padding: 20px;
+			background-color: rgba($color: #000000, $alpha: 0);
+			line-height: 0;
+			@include animate( background-color, 320ms );
+			.thumbnail-container {
+				position: absolute;
+				top: 1px;
+				display: block;
+				height: 68px;
+				width: 68px;
+				border-radius: 50%;
+				background-color: #999999;
+				@include animate( transform, 320ms );
+				@include transform( scale(0) );
+			}
+		}
+		&.right {
+			.preview-container {
+				padding-left: 80px;
+				border-radius: 35.5px 0 0 35.5px;
+				.thumbnail-container {
+					left: 1px;
+				}
+			}
+		}
+		&.left {
+			.preview-container {
+				padding-right: 80px;
+				border-radius: 0 35.5px 35.5px 0;
+				.thumbnail-container {
+					right: 1px;
+				}
+			}
+		}
+		&:hover {
+			.preview-container {
+				background-color: rgba($color: #000000, $alpha: 0.8);
+				.thumbnail-container {
+					@include transform( scale(1) );
+				}
+			}
+		}
+	}
 }
 
 

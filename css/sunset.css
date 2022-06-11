@@ -26,7 +26,7 @@
 	Placeholder
 	------------------------------------------------
 */
-.header-container, .sunset-format-image .entry-header {
+.header-container, .sunset-format-image .entry-header, .sunset-format-gallery .carousel-control {
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 }
 
@@ -495,5 +495,69 @@ h1.entry-title:after {
 
 .sunset-format-gallery .standard-featured:after {
   background-color: transparent;
+}
+
+.sunset-format-gallery .carousel-control {
+  background: none;
+  background-image: none;
+  opacity: 1;
+  -webkit-filter: alphpa(opacity=100);
+          filter: alphpa(opacity=100);
+  font-size: 30px;
+  width: auto;
+}
+
+.sunset-format-gallery .carousel-control .preview-container {
+  position: relative;
+  display: block;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0);
+  line-height: 0;
+  -webkit-transition: background-color 320ms ease;
+  transition: background-color 320ms ease;
+}
+
+.sunset-format-gallery .carousel-control .preview-container .thumbnail-container {
+  position: absolute;
+  top: 1px;
+  display: block;
+  height: 68px;
+  width: 68px;
+  border-radius: 50%;
+  background-color: #999999;
+  -webkit-transition: transform 320ms ease;
+  -webkit-transition: -webkit-transform 320ms ease;
+  transition: -webkit-transform 320ms ease;
+  transition: transform 320ms ease;
+  transition: transform 320ms ease, -webkit-transform 320ms ease;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+
+.sunset-format-gallery .carousel-control.right .preview-container {
+  padding-left: 80px;
+  border-radius: 35.5px 0 0 35.5px;
+}
+
+.sunset-format-gallery .carousel-control.right .preview-container .thumbnail-container {
+  left: 1px;
+}
+
+.sunset-format-gallery .carousel-control.left .preview-container {
+  padding-right: 80px;
+  border-radius: 0 35.5px 35.5px 0;
+}
+
+.sunset-format-gallery .carousel-control.left .preview-container .thumbnail-container {
+  right: 1px;
+}
+
+.sunset-format-gallery .carousel-control:hover .preview-container {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.sunset-format-gallery .carousel-control:hover .preview-container .thumbnail-container {
+  -webkit-transform: scale(1);
+  transform: scale(1);
 }
 /*# sourceMappingURL=sunset.css.map */
