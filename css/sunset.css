@@ -605,4 +605,25 @@ h1.entry-title:after {
   font-size: 12px;
   letter-spacing: 0.06em;
 }
+
+.sunset-format-link h1.entry-title:after, .sunset-format-link h1.entry-title:before {
+  display: none;
+}
+
+.sunset-format-link h1.entry-title a {
+  display: block;
+}
+
+.sunset-format-link h1.entry-title .link-icon {
+  display: block;
+  color: white;
+  font-size: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.6);
+  margin: 0 auto;
+  line-height: 1em;
+  padding-top: 10px;
+}
 /*# sourceMappingURL=sunset.css.map */
