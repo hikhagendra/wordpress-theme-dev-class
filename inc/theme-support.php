@@ -113,3 +113,30 @@ function sunset_get_media( $type = array() ) {
 
     return $output;
 }
+
+function sunset_get_bs_slides( $attachments ) {
+
+    $output = array();
+    $count = count($attachments) - 1;
+
+    for( $i = 0; $i <= $count; $i++ ):
+
+    $active = ( $i == 0 ? 'active' : '');
+
+    $n = ( $i == $count ? 0 : $i+1 );
+    $nextImg = wp_get_attachment_thumb_url( $attachments[$n]->ID );
+    $p = ( $i == 0 ? $count : $i-1 );
+    $prevImg = wp_get_attachment_thumb_url( $attachments[$p]->ID );
+
+    $output[$i] = array(
+        'class'     =>  $active,
+        'url'       =>  wp_get_attachment_url( $attachments[$i]->ID ),
+        'next_img'  =>  $nextImg,
+        'prev_img'  =>  $prevImg,
+        'caption'   =>  $attachments[$i]->post_excerpt
+    );
+
+    endfor;
+
+    return $output;
+}

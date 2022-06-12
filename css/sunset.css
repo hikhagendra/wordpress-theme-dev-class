@@ -33,8 +33,8 @@
 .entry-excerpt.image-caption {
   /* FF3.6-15 */
   /* Chrome10-25,Safari5.1-6 */
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.5)));
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.5)));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#80000000',GradientType=0 );
   /* IE6-9 */
@@ -456,6 +456,8 @@ h1.entry-title:after {
 
 .entry-excerpt.image-caption p {
   margin: 40px 0;
+  color: white;
+  font-size: 14px;
 }
 
 .sunset-format-audio h1.entry-title {
@@ -559,5 +561,20 @@ h1.entry-title:after {
 .sunset-format-gallery .carousel-control:hover .preview-container .thumbnail-container {
   -webkit-transform: scale(1);
   transform: scale(1);
+}
+
+.sunset-format-gallery .entry-excerpt.image-caption {
+  -webkit-transition: transform 320ms ease;
+  -webkit-transition: -webkit-transform 320ms ease;
+  transition: -webkit-transform 320ms ease;
+  transition: transform 320ms ease;
+  transition: transform 320ms ease, -webkit-transform 320ms ease;
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+}
+
+.sunset-format-gallery:hover .entry-excerpt.image-caption {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
 }
 /*# sourceMappingURL=sunset.css.map */

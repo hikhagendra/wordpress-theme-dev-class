@@ -317,6 +317,8 @@ h1 {
 		margin: 0;
 		p {
 			margin: 40px 0;
+			color: white;
+			font-size: 14px;
 		}
 	}
 }
@@ -421,6 +423,19 @@ h1 {
 				.thumbnail-container {
 					@include transform( scale(1) );
 				}
+			}
+		}
+	}
+	.entry-excerpt {
+		&.image-caption {
+			@include animate( transform, 320ms );
+			@include transform( translateY(100%) );
+		}
+	}
+	&:hover {
+		.entry-excerpt {
+			&.image-caption {
+				@include transform( translateY(0) );
 			}
 		}
 	}
