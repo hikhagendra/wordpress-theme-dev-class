@@ -14,7 +14,7 @@ get_header(); ?>
 
                     if ( have_posts() ) :
                         $i = 1;
-                        while ( have_posts() && $i < 6 ) : the_post();
+                        while ( have_posts() && $i < 8 ) : the_post();
 
                             get_template_part( 'template-parts/content', get_post_format() );
 

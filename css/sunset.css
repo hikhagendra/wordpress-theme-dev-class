@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* 
     @package sunsettheme
 */
@@ -576,5 +577,32 @@ h1.entry-title:after {
 .sunset-format-gallery:hover .entry-excerpt.image-caption {
   -webkit-transform: translateY(0);
   transform: translateY(0);
+}
+
+.sunset-format-quote .quote-content {
+  font-size: 42px;
+  font-weight: 100;
+  line-height: 1.3em;
+  letter-spacing: 0.03em;
+}
+
+.sunset-format-quote .quote-content:before, .sunset-format-quote .quote-content:after {
+  display: inline-block;
+  position: relative;
+  color: #cccccc;
+}
+
+.sunset-format-quote .quote-content:before {
+  content: '❝';
+}
+
+.sunset-format-quote .quote-content:after {
+  content: '❞';
+}
+
+.sunset-format-quote .quote-author {
+  color: #898989;
+  font-size: 12px;
+  letter-spacing: 0.06em;
 }
 /*# sourceMappingURL=sunset.css.map */
