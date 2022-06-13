@@ -1,4 +1,6 @@
 jQuery(document).ready(function ($) {
+  revealPosts();
+
   // Custom Sunset Scripts
 
   var carousel = ".sunset-carousel-thumb";
@@ -51,14 +53,31 @@ jQuery(document).ready(function ($) {
         console.log(response);
       },
       success: function (response) {
-        that.data("page", newPage);
-        $(".sunset-posts-container").append(response);
-
         setTimeout(function () {
+          that.data("page", newPage);
+          $(".sunset-posts-container").append(response);
+
           that.removeClass("loading").find(".text").slideDown(320);
           that.find(".sunset-icon").removeClass("spin");
+
+          revealPosts();
         }, 1000);
       },
     });
   });
+
+  // Helper Functions
+  function revealPosts() {
+    var posts = $("article:not(.reveal)");
+    var i = 0;
+
+    setInterval(function () {
+      if (i >= posts.length) return false;
+
+      var el = posts[i];
+      $(el).addClass("reveal").find(".sunset-carousel-thumb").carousel();
+
+      i++;
+    }, 200);
+  }
 });

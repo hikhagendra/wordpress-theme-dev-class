@@ -686,6 +686,20 @@ h1.entry-title:after {
   color: white;
 }
 
+.sunset-posts-container article {
+  -webkit-transition: all 320ms ease;
+  transition: all 320ms ease;
+  -webkit-transform: translateY(100px);
+  transform: translateY(100px);
+  opacity: 0;
+}
+
+.sunset-posts-container article.reveal {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
+}
+
 .btn-sunset-load {
   display: block;
   width: 200px;
