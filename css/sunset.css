@@ -656,4 +656,12 @@ h1.entry-title:after {
   background-color: rgba(0, 0, 0, 0.05);
   padding-right: 10px;
 }
+
+.sunset-footer {
+  background-color: #333333;
+  padding: 20px 0;
+  margin-top: 40px;
+  display: block;
+  color: white;
+}
 /*# sourceMappingURL=sunset.css.map */
