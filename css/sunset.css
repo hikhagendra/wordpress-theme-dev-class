@@ -20,6 +20,27 @@
 	Mixins
 	------------------------------------------------
 */
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 /* 
     @package sunsettheme
 */
@@ -663,5 +684,41 @@ h1.entry-title:after {
   margin-top: 40px;
   display: block;
   color: white;
+}
+
+.btn-sunset-load {
+  display: block;
+  width: 200px;
+  color: #333333;
+  font-size: 30px;
+  margin: 0 auto;
+  cursor: pointer;
+  opacity: 0.5;
+  -webkit-transition: opacity 320ms ease;
+  transition: opacity 320ms ease;
+}
+
+.btn-sunset-load:hover, .btn-sunset-load:focus, .btn-sunset-load.loading {
+  opacity: 1;
+  color: #333333;
+}
+
+.btn-sunset-load.loading {
+  cursor: default;
+}
+
+.btn-sunset-load span {
+  display: block;
+}
+
+.spin {
+  -webkit-animation-name: spin;
+          animation-name: spin;
+  -webkit-animation-duration: 1000ms;
+          animation-duration: 1000ms;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 /*# sourceMappingURL=sunset.css.map */
